@@ -1,5 +1,5 @@
 ﻿using SocialeKaart.Api.Core.Entities;
-using SocialeKaart.Api.Core.Entities.Base;
+using SocialeKaart.Api.Core.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace SocialeKaart.Api.Core.Repositories
 {
-    public interface IBaseRepository<T> where T : EntityBase
+    public interface ILogoService : IBaseRepository<Logopedist>
     {
-        Task<IEnumerable<T>> GetAll();
-        Task<T> GetById(int id);
+
     }
 }
